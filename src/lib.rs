@@ -2,6 +2,8 @@ pub type BlockHash = Vec<u8>;
 
 use std::time::{ SystemTime, UNIX_EPOCH };
 
+
+//Reference: https://github.com/GeekLaunch/blockchain-rust/blob/master/src/lib.rs
 pub fn now () -> u128 {
     let duration = SystemTime::now()
         .duration_since(UNIX_EPOCH)
@@ -59,6 +61,7 @@ pub fn u128_bytes (u: &u128) -> [u8; 16] {
 }
 
 
+//Reference: https://github.com/melekes/merkle-tree-rs/blob/master/src/lib.rs
 pub struct MerkleTree<H = DefaultHasher> {
     hasher: H,
     nodes: Vec<Hash>,
@@ -496,7 +499,7 @@ mod tests {
         assert_eq!(new_tree.leaves().len(), existing_tree.leaves().len());
         assert_eq!(new_tree.leaves(), existing_tree.leaves());
     }
-}
+}///Reference: 
 
 
 

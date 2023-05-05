@@ -29,7 +29,7 @@ fn main() {
     transactions[3]= "7dbc497969c7475e45d952c4a872e213fb15d45e5cd3473c386a71a1b0c136a1";
     transactions[4]= "55ea01bd7e9afd3d3ab9790199e777d62a0709cf0725e80a7350fdb22d7b8ec6";
     transactions[5]= "12b6a7934c1df821945ee9ee3b3326d07ca7a65fd6416ea44ce8c3db0c078c64";
-    transactions[6]= "7f42eda67921ee92eae5f79bd37c68c9cb859b899ce70dba68c48338857b7818";// Dummy Transactions
+    transactions[6]= "7f42eda67921ee92eae5f79bd37c68c9cb859b899ce70dba68c48338857b7818";// Reference: https://www.kaggle.com/datasets/bigquery/bitcoin-blockchain
 
     let mut filter = BloomFilter::with_rate(false_positive_rate,expected_num_items);///create bloom filter
     for i in 0..7{
